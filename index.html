@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="index.css">
+        <title>Kabul Market</title>
+    </head>
+    <body>
+        <header>
+            <h1>Kabul Market</h1>
+            <div class="header-buttons">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button id="toggleCartButton">Toggle Cart</button>
+            </div>
+        </header>
+    
+        <aside class="side-menu hidden" id="cartMenu">
+            <h2>Cart</h2>
+            <ul id="cartItems">
+                
+            </ul>
+            <p id="totalAmount">Total: $0.00</p>
+        </aside>
+    
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <img src="img/apple.jpg" alt="Apple">
+                    <h2>Apple</h2>
+                    <p>Price: $1.00</p>
+                    <button id="apple">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="img/banana.jpg" alt="Banana">
+                    <h2>Banana</h2>
+                    <p>Price: $2.00</p>
+                    <button id="banana">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="img/carrot.jpg" alt="Carrot">
+                    <h2>Carrot</h2>
+                    <p>Price: $3.00</p>
+                    <button id="carrot">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="img/grapes.jpeg" alt="Grapes">
+                    <h2>Grapes</h2>
+                    <p>Price: $4.00</p>
+                    <button id="grapes">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!--script src="cordova.js"></script!-->
+        <script src="index.js"></script>
+    </body>
+</html>
